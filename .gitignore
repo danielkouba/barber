@@ -1,4 +1,4 @@
 .DS_Store
 src/
 node_modules/*
-client/bash_modules/*
+client/bower_components/*
