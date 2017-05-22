@@ -11,7 +11,9 @@
   },
   "scripts": {
     "build-css": "node-sass --output-style compressed -o client/src/css src/scss",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "start": "node index.js",
+    "postinstall": "bower install"
   },
   "dependencies": {
     "bcrypt": "^1.0.2",
