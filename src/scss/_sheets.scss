@@ -1,0 +1,105 @@
+[class*="sheet__"]{
+	width:100%;
+	padding:50px 0;
+	background-color:$secondary;
+}
+
+// DASHBOARD SHEETS
+.sheet__dashboard{
+	height: auto;
+	text-align: center;
+		/* fix background */
+	background-attachment: fixed;
+	/* center it */
+	background-position: center center;
+	/* Scale it nicely to the element */
+	background-size: cover;
+	background-image: url("../pics/mary_jane.png");
+}
+
+.sheet__topstrains{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+	div.title{
+		width:100%;
+		text-align:center;
+	}
+}
+
+.sheet__featured{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
+
+.sheet__sponsors{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
+
+// DELIVERY SHEETS
+.sheet__head{
+	background-image:$gradient;
+	padding-top:120px;
+}
+.sheet__delivery{
+	height: auto;
+	background-color:$light-grey;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
+.sheet__contact{
+	padding: 0;
+	text-align:center;
+}
+.sheet__menu {
+	padding-top:0;
+	height:600px;
+}
+
+.sheet__banner {
+	height:200px;
+	background-color: $grey;
+	background-image:$gradient;
+  	text-align: center;
+  	color: white;
+}
+
+.sheet__product{
+	padding-top:0;
+	height:600px;
+}
+
+.sheet__products{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
+
+.sheet__map{
+	display:flex;
+	justify-content:center;
+}
+
+
+// REGISTER SHEETS
+.sheet__register{
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+	background-color: $light-grey;
+}
+
+
+//LOGIN SHEETS
+.sheet__login {
+	background-color:$light-grey;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: center;
+
+}
+

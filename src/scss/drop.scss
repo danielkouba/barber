@@ -1,0 +1,161 @@
+html {
+  overflow-y: scroll;
+}
+body{
+  background:url("../../src/images/clippers.jpg") no-repeat left top;
+  background-size: cover;
+}
+md-content {
+  background-color: #ECEFF1!important;
+  padding: 30px;
+}
+.logo-container{
+  width:100%;
+}
+.center-logo{
+  width:355px;
+  height:233px;
+  background: url("/src/images/logo.png") no-repeat;
+  background-size: contain;
+  overflow:hidden;
+}
+.corner-logo {
+  width:174px;
+  height:116px;
+  background: url("/src/images/logo.png") no-repeat;
+  background-size: contain;
+  overflow:hidden;
+}
+// .animate-show-hide {
+//     -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+//     transition: width 2s, height 2s, background-color 2s, transform 2s;  
+//   // -webkit-transition:all linear 500ms !important;
+//   //         transition:all linear 500ms !important;
+// }
+// .animate-show-hide.ng-hide {
+//   max-height: 0;
+// }
+
+// .animate-show-hide.ng-hide-add,
+// .animate-show-hide.ng-hide-remove {
+//   transition: max-height linear 250ms;
+// }
+.animate-show-hide.ng-hide-remove {
+  animation: 450ms appear;
+}
+.animate-show-hide.ng-hide-add {
+  animation: 450ms disappear;
+}
+
+@keyframes appear {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height:1000px;
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  from {
+    max-height:1000px;
+    opacity: 1;
+  }
+  to {
+    max-height:0;
+    opacity: 0;
+  }
+}
+
+
+
+.selected-item ~ .item .user,
+.item:first-child .user {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.selected-item ~ .item .user.selected,
+.item:first-child .user.selected {
+  margin-top: 0;
+}
+.item:last-child .user {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.item .tile .folded {
+  cursor: pointer;
+}
+.item .user {
+  background-color: white;
+  box-sizing:border-box;
+  width:212px;
+  transition: all 500ms;
+}
+.folded{
+  outline: 0;
+  border:none;
+}
+.item .user h3{
+  font-family: "Great Vibes";
+  font-weight: 400; 
+  font-size:2em;
+  font-style: normal;
+}
+.item .user h3 {
+  margin:12px 0 0 0;
+}
+
+.item .user h3,
+.item .user p {
+  transition: all 500ms;
+}
+.item .user p {
+  opacity: 1;
+  height: inherit;
+}
+.item .user p.ng-hide {
+  opacity: 0;
+  height: 0;
+}
+.item .user.selected {
+  margin: 30px -15px;
+  border-radius: 2px;
+  width: 450px;
+  // max-width:500px;
+  background-color:white;
+  padding:20px;
+}
+.item .user.selected .expanded {
+  visibility: visible;
+}
+.item .user.selected .expanded,
+.item .user.selected .expanded > * {
+  max-height: 700px;
+  opacity: 1;
+}
+.item .user.selected .expanded .md-label {
+  border: hidden;
+}
+.item .user .expanded {
+  visibility: hidden;
+}
+// .dropdown-content {
+
+// }
+.item .user .expanded,
+.item .user .expanded > * {
+  max-height: 0;
+  opacity: 0;
+  transition: all 500ms;
+}
+.item .user .expanded .split {
+  padding: 10px;
+}
+.item .user .face {
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 48px;
+  height: 48px;
+  margin: 16px;
+}
