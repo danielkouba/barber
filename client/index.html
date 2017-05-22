@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Double Edge Barbershop</title>
+
+    <!-- Bower Components -->
+    <script type="text/javaScript" src="/bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javaScript" src="/bower_components/angular/angular.js"></script>
+    <script type="text/javaScript" src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javaScript" src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script type="text/javaScript" src="/bower_components/angular-aria/angular-aria.min.js"></script>
+    <!-- App -->
+    <script type="text/javaScript" src="/assets/app.js"></script>
+    <!-- Controllers -->
+    <script type="text/javaScript" src="/assets/controllers/viewController.js"></script>
+    <script type="text/javaScript" src="/assets/factories/viewFactory.js"></script>
+    <!-- Nav Bar Code -->
+    <script type="text/javascript" src="/src/js/nav.js" ></script>
+	<!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <!-- <link rel="stylesheet" href="/src/css/main.css"> -->
+    <link rel="stylesheet" href="/src/css/drop.css">
+    
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+</head>
+<body>
+        <!-- <header> -->
+<!--             <a class="mobile" href="">&#9776;</a>
+            <nav>
+              <ul id="nav">
+                <li><a href="/"><div id="logo"></div></a></li>
+                <li><a href="#/about">ABOUT</a></li>
+                <li><a href="#/barbers">BARBERS</a></li>
+                <li><a href="#/services">SERVICES</a></li>
+                <li><a href="#/contact">CONTACT</a></li>
+              </ul>
+            </nav> -->
+        
+<!--         <div ng-controller="viewController" ng-cloak>
+          <md-content class="md-padding">
+            <md-nav-bar
+              md-selected-nav-item="currentNavItem"
+              nav-bar-aria-label="navigation links">
+              <md-nav-item md-nav-click="goto('about')" name="about">
+                ABOUT
+              </md-nav-item>
+              <md-nav-item md-nav-click="goto('barbers')" name="barbers">
+                BARBERS
+              </md-nav-item>
+              <md-nav-item md-nav-click="goto('contact')" name="contact">
+                CONTACT
+              </md-nav-item>
+              <md-nav-item md-nav-click="goto('services')" name="services">
+                SERVICES
+              </md-nav-item>
+              <md-nav-item md-nav-click="goto('booknow')" name="booknow">
+                BOOK NOW
+              </md-nav-item> -->
+              <!-- these require actual routing with ui-router or ng-route, so they
+              won't work in the demo
+              <md-nav-item md-nav-href="#page4" name="page5">Page Four</md-nav-item>
+              <md-nav-item md-nav-sref="app.page5" name="page4">Page Five</md-nav-item>
+              You can also add options for the <code>ui-sref-opts</code> attribute.
+              <md-nav-item md-nav-sref="page6" sref-opts="{reload:true, notify:true}">
+                Page Six
+              </md-nav-item>
+              -->
+            <!--</md-nav-bar> 
+          </md-content>
+        </div>
+        </header> -->
+
+
+
+
+
+
+
+
+
+        <!-- END Nav Bar -->
+        <!-- Partial -->
+        <div class="partial-container" ng-view=""></div>
+        <!-- END Partial -->
+        <footer>
+                &copy; DoubleEdge Barbershop 2017
+        </footer>
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+</body>
+</html>

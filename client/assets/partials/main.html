@@ -1,0 +1,109 @@
+
+
+
+
+
+<div class="logo-container ng-hide animate-show-hide" layout="row" layout-fill layout-align="start center" ng-show="selectedUserIndex != undefined">
+  <div class="corner-logo">
+    <!-- <img src="" alt="">     -->
+  </div>
+</div>
+
+<div class="logo-container ng-hide animate-show-hide" layout="row" layout-fill layout-align="center center" ng-show="selectedUserIndex == undefined">
+  <div class="center-logo">
+    <!-- <img src="/src/images/logo.png" alt="">     -->
+  </div>
+</div>
+
+
+<div layout="column" layout-align="center center">
+
+<!-- ABOUT -->
+
+		<md-item  ng-repeat="data in users" class="item" ng-class="{ 'selected-item': $index == selectedUserIndex}">
+        <md-item-content class="user tile md-whiteframe-z1"
+                         ng-class="{ 'selected md-whiteframe-z2': $index == selectedUserIndex}"
+                         layout="column">
+          <div ng-click="selectUserIndex($index)" class="folded">
+<!--             <div class="md-tile-left">
+              <img ng-src="{{ user.face }}" class="face">
+            </div> -->
+            <div class="md-tile-content" style="text-align:center;">
+              <h3>{{data.name}}</h3>
+<!-- 
+              <p ng-hide="$index == selectedUserIndex">
+                <span></span>
+              </p> -->
+            </div>
+          </div>
+
+          <md-divider layout-fill ng-show="$index == selectedUserIndex"></md-divider>
+          <div class="dropdown-content">
+            
+
+          <!-- About -->
+          <div ng-if="data.content.type == 'about'" layout="column" layout-fill class="expanded dropdown-content">
+            <span>{{data.content.data}}</span>
+            <br/>
+          </div>
+
+          <!-- Barbers -->
+          <div ng-if="data.content.type == 'barbers'" layout="column" layout-fill class="expanded dropdown-content">
+            <div ng-repeat="barber in data.content.data">
+              <md-card>
+                <md-card-header>
+                  <md-card-avatar>
+                    <img class="md-user-avatar" src="/src/images/{{barber.image}}"/>
+                  </md-card-avatar>
+                  <md-card-header-text>
+                    <span class="md-title">{{barber.name}}</span>
+                    <span class="md-subhead">{{barber.title}}</span>
+                  </md-card-header-text>
+                  <md-button>Book now</md-button>
+                </md-card-header>
+              </md-card>
+            </div>
+            <br/>
+          </div>
+          
+          <!-- Contact -->
+          <div ng-if="data.content.type == 'contact'" layout="column" layout-fill class="expanded dropdown-content">
+              <span>{{data.content.data.phone}}</span>
+              <span>{{data.content.data.email}}</span>
+              <span>{{data.content.data.address}}</span>
+              <span>{{data.content.data.city}}, {{data.content.data.state}} {{data.content.data.zip}}</span>
+            <br/>
+          </div>
+
+                    
+          <!-- Contact -->
+          <div ng-if="data.content.type == 'services'" layout="column" layout-fill class="expanded">
+            <div ng-repeat="service in data.content.data">
+              <span>{{service.name}} {{service.price}}</span>
+            </div>
+            <br/>
+          </div>
+
+
+
+
+          </div>
+          
+        </md-item-content>
+        <!-- <md-divider class="divider-inset" ng-if="!$last"></md-divider> -->
+      </md-item>
+      <md-item class="item">
+        <md-item-content  style="background-color: #8e0000; color: #F5DA9F; font-weight: bold;" class="user tile md-whiteframe-z1"
+                         layout="column">
+        <a href="https://www.vagaro.com/doubleedgebarbershop/about" style="color:inherit;text-decoration:none;">
+          <div >
+            <div class="md-tile-content" style="text-align:center;" >
+              <h3>Book Now</h3>
+            </div>
+          </div>
+        </a>
+          <md-divider layout-fill ng-show="$index == selectedUserIndex"></md-divider>
+        </md-item-content>
+      </md-item>
+</div>
+
