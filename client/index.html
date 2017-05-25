@@ -17,6 +17,7 @@
     <script type="text/javaScript" src="/assets/app.js"></script>
     <!-- Controllers -->
     <script type="text/javaScript" src="/assets/controllers/viewController.js"></script>
+    <script type="text/javaScript" src="/assets/controllers/navController.js"></script>
     <script type="text/javaScript" src="/assets/factories/viewFactory.js"></script>
     <!-- Nav Bar Code -->
     <script type="text/javascript" src="/src/js/nav.js" ></script>
@@ -31,14 +32,10 @@
     <meta name="viewport" content="width=device-width" initial-scale="1">
 </head>
 <body>
-    <a href="" class="mobile" ng-click="toggleLeft()" ng-hide="isOpenRight()" class="md-primary" hide-gt-sm>&#9776; </a> 
-
-
-
 
 
       <header>
-
+        
         <div ng-controller="viewController" ng-cloak hide-sm hide-xs>
           <md-content class="nav_bar">
             <md-nav-bar
@@ -71,56 +68,51 @@
         </header> 
 
 
-        <div ng-controller="AppCtrl" layout="column" style="height:500px;" ng-cloak>
+        <div ng-controller="navController" layout="column" style="height:500px;" ng-cloak>
+        <a href="" class="mobile" ng-click="toggleLeft()" class="md-primary" hide-gt-sm>&#9776;</a> 
+        <section layout="row" flex hide-gt-sm>
 
-  <section layout="row" flex hide-gt-sm>
+          <md-sidenav
+              class="md-sidenav-left"
+              md-component-id="left"
+              md-is-locked-open="$mdMedia('gt-md')"
+              md-whiteframe="4">
 
-    <md-sidenav
-        class="md-sidenav-left"
-        md-component-id="left"
-        md-is-locked-open="$mdMedia('gt-md')"
-        md-whiteframe="4">
+            <md-toolbar class="md-theme-default">
+              <h1 class="md-toolbar-tools">Double Edge Barbershop</h1>
+            </md-toolbar>
+            <md-content layout-padding ng-controller="LeftCtrl">
+              <md-button ng-click="goto('about')" class="md-primary" hide-gt-md>
+                About
+              </md-button>
+            </md-content>
+            <md-content layout-padding ng-controller="LeftCtrl">
+              <md-button ng-click="goto('barbers')" class="md-primary" hide-gt-md>
+                Barbers
+              </md-button>
+            </md-content>
+            <md-content layout-padding ng-controller="LeftCtrl">
+              <md-button ng-click="goto('contact')" class="md-primary" hide-gt-md>
+                Contact
+              </md-button>
+            </md-content>
+            <md-content layout-padding ng-controller="LeftCtrl">
+              <md-button ng-click="goto('services')" class="md-primary" hide-gt-md>
+                Services
+              </md-button>
+            </md-content>
+            <md-content layout-padding ng-controller="LeftCtrl">
+              <md-button ng-click="goto('booknow')" class="md-warn" hide-gt-md>
+                Book Now
+              </md-button>
+            </md-content>
+          </md-sidenav>
+          
+          <md-content>
+            <div class="partial-container" ng-view=""></div>
+          </md-content>
 
-      <md-toolbar class="md-theme-indigo">
-        <h1 class="md-toolbar-tools">Sidenav Left</h1>
-      </md-toolbar>
-      <md-content layout-padding ng-controller="LeftCtrl">
-        <md-button ng-click="close()" class="md-primary" hide-gt-md>
-          Close Sidenav Left
-        </md-button>
-        <p hide show-gt-md>
-          This sidenav is locked open on your device. To go back to the default behavior,
-          narrow your display.
-        </p>
-      </md-content>
-
-    </md-sidenav>
-    
-    <md-content>
-      <div class="partial-container" ng-view=""></div>
-    </md-content>
-  
-    <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right">
-
-      <md-toolbar class="md-theme-light">
-        <h1 class="md-toolbar-tools">Sidenav Right</h1>
-      </md-toolbar>
-      <md-content ng-controller="RightCtrl" layout-padding>
-        <form>
-          <md-input-container>
-            <label for="testInput">Test input</label>
-            <input type="text" id="testInput"
-                   ng-model="data" md-autofocus>
-          </md-input-container>
-        </form>
-        <md-button ng-click="close()" class="md-primary">
-          Close Sidenav Right
-        </md-button>
-      </md-content>
-
-    </md-sidenav>
-
-  </section>
+        </section>
 
 </div>
 

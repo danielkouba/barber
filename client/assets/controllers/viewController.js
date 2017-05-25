@@ -1,6 +1,5 @@
 myApp.controller('viewController', function($scope, $location, $mdDialog,viewFactory){
 
-
 	  $scope.users = [
     {
       name: "About",
