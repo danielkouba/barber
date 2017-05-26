@@ -33,18 +33,17 @@
 </head>
 <body>
 
-
-      <header>
         
         <div ng-controller="viewController" ng-cloak hide-sm hide-xs>
-          <md-content class="nav_bar">
+          <md-content class="nav_bar" layout="row" layout-align="center start">
+            <div class="corner-logo" style="border:none; margin:0;">  
+                &nbsp;
+              </div>
             <md-nav-bar
               md-selected-nav-item="currentNavItem"
-              nav-bar-aria-label="navigation links">
+              nav-bar-aria-label="navigation links" layout="row" layout-align="space-around center">
               
-              <md-nav-item class="corner-logo" style="border:none; margin:0;">  
-                &nbsp;
-              </md-nav-item>
+              
 
 
               <md-nav-item md-nav-click="goto('about')" name="about">
@@ -59,13 +58,15 @@
               <md-nav-item md-nav-click="goto('services')" name="services">
                 Services
               </md-nav-item>
+              <md-nav-item md-nav-click="goto('gallery')" name="gallery">
+                Gallery
+              </md-nav-item>
               <md-nav-item md-nav-click="goto('booknow')" name="booknow">
                 Book Now
               </md-nav-item>
             </md-nav-bar> 
           </md-content>
         </div>
-        </header> 
 
 
         <div ng-controller="navController" layout="column" style="height:500px;" ng-cloak>
@@ -107,15 +108,13 @@
               </md-button>
             </md-content>
           </md-sidenav>
-          
-          <md-content>
-            <div class="partial-container" ng-view=""></div>
-          </md-content>
 
         </section>
 
+        <md-content>
+            <div class="partial-container" ng-view=""></div>
+        </md-content>       
 </div>
-
         
 
         <!-- END Nav Bar -->

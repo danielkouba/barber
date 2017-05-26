@@ -67,6 +67,25 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
     }
     ];
     
+    $scope.barbers = [
+          {name: "Neil Honbo",
+          image: "barbershot-neil.jpg",
+          title: "@double.edge.barbers"},
+          {name: "Cory Walters",
+          image: "barbershot-cory.jpg",
+          title: "@double.edge.barbers"},
+          {name: "Mike Stout",
+          image: "barbershot-mike.jpg",
+          title: "@double.edge.barbers"},
+          {name: "Connor O'Brien",
+          image: "barbershot-connor.jpg",
+          title: "@double.edge.barbers"}
+        ];
+
+
+
+
+
     
     $scope.selectedUserIndex = undefined;
     $scope.selectUserIndex = function (index) {
@@ -83,9 +102,13 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
 	$scope.currentNavItem = 'page1';
 
 	$scope.goto = function(str){
-		console.log(str)
-		$scope.currentNavItem = str;
-		$location.url("/"+str);
+    if(str == 'booknow'){
+      window.location.href = 'https://www.vagaro.com/doubleedgebarbershop/about';
+    }else{
+      console.log(str)
+      $scope.currentNavItem = str;
+      $location.url("/"+str);  
+    }
 	}
 	// Create a blank array to load users into.
 

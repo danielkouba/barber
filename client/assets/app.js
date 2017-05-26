@@ -37,7 +37,12 @@ myApp.config(function ( $routeProvider, $locationProvider, $mdThemingProvider){
 
 $routeProvider
 .when('/',{
-    templateUrl: 'assets/partials/main.html',
+    templateUrl: 'assets/partials/about.html',
+    controller: 'viewController', 
+    controllerAs: 'VC'
+})
+.when('/gallery', {
+    templateUrl: 'assets/partials/gallery.html',
     controller: 'viewController', 
     controllerAs: 'VC'
 })
