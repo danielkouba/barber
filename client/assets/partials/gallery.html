@@ -2,18 +2,24 @@
       <md-card>
         <md-card-title>
           <md-card-title-text>
-            <span class="md-headline">Gallery</span>
+            <span style="font-family: 'Milkshake'; color:grey;" class="md-headline">Gallery</span>
           </md-card-title-text>
         </md-card-title>
         <md-card-content>
-        <div layout="column" layout-fill class="expanded dropdown-content">      
-<!-- 
-                            <span>{{data.content.data.phone}}</span>
-              <span>{{data.content.data.email}}</span>
-              <span>{{data.content.data.address}}</span>
-              <span>{{data.content.data.city}}, {{data.content.data.state}} {{data.content.data.zip}}</span> -->
-            <br/>
-          </div>
+          <md-grid-list
+                md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="6"
+                md-row-height-gt-md="1:1" md-row-height="4:3"
+                md-gutter="8px" md-gutter-gt-sm="4px" >
+
+            <md-grid-tile ng-repeat="tile in tiles"
+                          md-rowspan="{{tile.span.row}}"
+                          md-colspan="{{tile.span.col}}"
+                          md-colspan-sm="1"
+                          md-colspan-xs="1"
+                          ng-class="tile.background" >
+              <!-- <md-icon md-svg-icon="{{tile.icon}}"></md-icon> -->
+            </md-grid-tile>
+          </md-grid-list>
 
         </md-card-content>
 <!--         <md-card-actions layout="row" layout-align="end center">

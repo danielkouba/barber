@@ -1,21 +1,27 @@
 <div layout="column" layout-align="center center">
 	<h1 style="font-family: 'Milkshake'; color:grey;">Barbers</h1>
   <div layout="column" layout-fill class="expanded dropdown-content">
-    <div ng-repeat="barber in barbers">
-      <md-card>
-        <md-card-header>
-          <md-card-avatar>
-            <img class="md-user-avatar" src="/src/images/{{barber.image}}"/>
-          </md-card-avatar>
-          <md-card-header-text>
-            <span class="md-title">{{barber.name}}</span>
-            <span class="md-subhead">{{barber.title}}</span>
-          </md-card-header-text>
-          <md-button>Book now</md-button>
-        </md-card-header>
-      </md-card>
-    </div>
-    <br/>
+      <md-grid-list
+            md-cols-xs="1" md-cols-sm="1" md-cols-md="4" md-cols-gt-md="4"
+            md-row-height-gt-md="2:2" md-row-height="2:2"
+            md-gutter="6px" md-gutter-gt-sm="4px" >
+        <md-grid-tile ng-repeat="barber in barbers" md-rowspan="1" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1">
+          <md-card>
+            <md-card-title>
+              <md-card-title-text>
+                <span class="md-headline">{{barber.name}}</span>
+                <span class="md-subhead">{{barber.title}}</span>
+              </md-card-title-text>
+              <md-card-title-media>
+                <div class="md-media-lg card-media"><img class="md-user-avatar" src="/src/images/{{barber.image}}"/></div>
+              </md-card-title-media>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+              <md-button>Book Now</md-button>
+            </md-card-actions>
+          </md-card>
+      </md-grid-tile>
+    </md-grid-list>
   </div>
 
 

@@ -69,11 +69,11 @@
         </div>
 
 
-        <div ng-controller="navController" layout="column" style="height:500px;" ng-cloak>
-        <a href="" class="mobile" ng-click="toggleLeft()" class="md-primary" hide-gt-sm>&#9776;</a> 
-        <section layout="row" flex hide-gt-sm>
+        <div ng-controller="navController" layout="column" ng-cloak>
+          <a href="" class="mobile" ng-click="toggleLeft()" class="md-primary" hide-gt-sm>&#9776;</a> 
+          <section layout="row" flex hide-gt-sm>
 
-          <md-sidenav
+            <md-sidenav
               class="md-sidenav-left"
               md-component-id="left"
               md-is-locked-open="$mdMedia('gt-md')"
@@ -112,7 +112,7 @@
         </section>
 
         <md-content>
-            <div class="partial-container" ng-view=""></div>
+            <div class="partial-container" ng-view="" style="overflow-y: scroll"></div>
         </md-content>       
 </div>
         

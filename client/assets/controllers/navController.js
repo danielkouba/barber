@@ -51,12 +51,16 @@ myApp.controller('navController', function ($scope, $timeout, $mdSidenav, $log) 
   })
   .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log, $location) {
 
-    $scope.goto = function(str){
-      $scope.close()
+  $scope.goto = function(str){
+    if(str == 'booknow'){
+      window.location.href = 'https://www.vagaro.com/doubleedgebarbershop/about';
+    }else{
       console.log(str)
       $scope.currentNavItem = str;
-      $location.url("/"+str);
-    }    
+      $location.url("/"+str);  
+    }
+    $scope.close();
+  } 
     $scope.close = function () {
       // Component lookup should always be available since we are not using `ng-if`
       $mdSidenav('left').close()
