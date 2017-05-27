@@ -1,31 +1,37 @@
+@import 'breakpoints';
+@import 'colors';
+@import 'footer';
+@import 'icons';
+@import 'fonts';
+@import 'nav';
+
 html {
-  overflow-y: scroll;
+  // overflow-y: scroll;
 }
 body{
   background:url("../../src/images/clippers.jpg") no-repeat left top;
   background-size: cover;
 }
+.partial-container{
+  // opacity:0.8;
+  background-color:#ccc;
+  position:fixed;
+  padding-top:150px;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index:0;
+}
 md-content {
-  background-color: #ECEFF1!important;
-  padding: 30px;
+  // background-color: #ECEFF1!important;
+  // padding: 30px;
 }
 .logo-container{
   width:100%;
 }
-.center-logo{
-  width:355px;
-  height:233px;
-  background: url("/src/images/logo.png") no-repeat;
-  background-size: contain;
-  overflow:hidden;
-}
-.corner-logo {
-  width:174px;
-  height:116px;
-  background: url("/src/images/logo.png") no-repeat;
-  background-size: contain;
-  overflow:hidden;
-}
+
+
 // .animate-show-hide {
 //     -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
 //     transition: width 2s, height 2s, background-color 2s, transform 2s;  
