@@ -1,12 +1,17 @@
-<div layout="column" layout-align="center center">
-	<h1 style="font-family: 'Milkshake'; color:grey;">Barbers</h1>
-  <div layout="column" layout-fill class="expanded dropdown-content">
-      <md-grid-list
-            md-cols-xs="1" md-cols-sm="1" md-cols-md="4" md-cols-gt-md="4"
-            md-row-height-gt-md="2:2" md-row-height="2:2"
-            md-gutter="6px" md-gutter-gt-sm="4px" >
-        <md-grid-tile ng-repeat="barber in barbers" md-rowspan="1" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1">
-          <md-card>
+<!-- <div layout="column" layout-align="center center"> -->
+	
+<md-content class="md-padding" layout-xs="column" layout="row" layout-align="center center">
+    <div flex-xs flex-gt-xs="80" layout="row" md-cols="2" md-cols-gt-sm="2">
+
+
+    <h1 style="font-family: 'Milkshake'; color:grey;">Barbers</h1>
+    <!-- <div layout="column" layout-fill class="expanded dropdown-content"> -->
+    <!--       <md-grid-list
+                md-cols-xs="1" md-cols-sm="1" md-cols-md="4" md-cols-gt-md="4"
+                md-row-height-gt-md="2:2" md-row-height="2:2"
+                md-gutter="6px" md-gutter-gt-sm="4px" > -->
+        <!-- <md-grid-tile ng-repeat="barber in barbers" md-rowspan="1" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1"> -->
+          <md-card ng-repeat="barber in barbers">
             <md-card-title>
               <md-card-title-text>
                 <span class="md-headline">{{barber.name}}</span>
@@ -20,11 +25,8 @@
               <md-button>Book Now</md-button>
             </md-card-actions>
           </md-card>
-      </md-grid-tile>
-    </md-grid-list>
+      <!-- </md-grid-tile> -->
+    <!-- </md-grid-list> -->
   </div>
-
-
-
-</div>
+</md-content>
 

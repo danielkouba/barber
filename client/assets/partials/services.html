@@ -8,16 +8,22 @@
         <!-- <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out"> -->
         <md-card-title>
           <md-card-title-text>
-            <span style="font-family: 'Milkshake'; color:grey;" class="md-headline">Services</span>
+            <h2 style="text-align:center; font-family: 'Milkshake'; color:grey;" class="md-headline">Services</h2>
           </md-card-title-text>
         </md-card-title>
-        <md-card-content>
-        	<p>Haircut$35</p>
+        <md-card-content layout="column" layout-align="center center">
+        <table>
+          <tr ng-repeat="service in services">
+            <td>{{service.name}}</td>
+            <td>{{service.price}}</td>
+          </tr>
+        </table>
+        	<!-- <p>Haircut$35</p>
 			<p>Shave$40</p>
 			<p>Two Bits (Haircut & Shave)$70</p>
 			<p>Young Men’s Cut$25</p>
 			<p>Buzz$25</p>
-			<p>Beard Trim$15+</p>
+			<p>Beard Trim$15+</p> -->
         </md-card-content>
 <!--         <md-card-actions layout="row" layout-align="end center">
           <md-button>Action 1</md-button>

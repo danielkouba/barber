@@ -1,8 +1,11 @@
-  <md-content class="md-padding" layout="column" layout-align="center center">
+  <md-content class="md-padding" layout-xs="column" layout="row" layout-align="center center">
+    <div flex-xs flex-gt-xs="50" layout="column">
+
+  <!-- <md-content class="md-padding" layout="column" layout-align="center center"> -->
       <md-card>
         <md-card-title>
           <md-card-title-text>
-            <span style="font-family: 'Milkshake'; color:grey;" class="md-headline">Gallery</span>
+            <h2 style="font-family: 'Milkshake'; color:grey;" class="md-headline">Gallery</h2>
           </md-card-title-text>
         </md-card-title>
         <md-card-content>
@@ -11,13 +14,11 @@
                 md-row-height-gt-md="1:1" md-row-height="4:3"
                 md-gutter="8px" md-gutter-gt-sm="4px" >
 
-            <md-grid-tile ng-repeat="tile in tiles"
-                          md-rowspan="{{tile.span.row}}"
-                          md-colspan="{{tile.span.col}}"
+            <md-grid-tile ng-repeat="image in gallery.images"
                           md-colspan-sm="1"
-                          md-colspan-xs="1"
-                          ng-class="tile.background" >
-              <!-- <md-icon md-svg-icon="{{tile.icon}}"></md-icon> -->
+                          md-colspan-xs="1" 
+                          style="background: url('{{gallery.path}}{{image.name}}') no-repeat left top;
+  background-size: cover;">
             </md-grid-tile>
           </md-grid-list>
 
@@ -27,4 +28,6 @@
           <md-button>Action 2</md-button>
         </md-card-actions> -->
       </md-card>
+<!-- </md-content> -->
+</div>
 </md-content>
