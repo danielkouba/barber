@@ -5,7 +5,7 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
       name: "About",
       content: {
       	type: "about",
-      	data: "Welcome to Double Edge Studio located in the heart of Thousand Oaks, California. We specialize in traditional barbering services, ranging from hot towel shaves to classic/contemporary haircuts and styling – all in a comfortable and private atmosphere.  At Double Edge Studio, you’re not a number, you’re family. Always Tight…Always Right."
+      	data: "Welcome to Double Edge Barbershop. We are a full-service shop located in the heart of Thousand Oaks, CA. Our team is anchored by four full-time licensed barbers and we have a passion for traditional barbering and for serving our community. We have high standards as do our guests. Stop in for a cut, hot towel shave or just hang out. At Double Edge you’re not a number, you’re family."
       }
     },
     {
@@ -19,7 +19,7 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
       		{name: "Cory Walters",
           image: "barbershot-cory.jpg",
           title: "@double.edge.barbers"},
-      		{name: "Mike Stout",
+      		{name: "Michael Stout",
           image: "barbershot-mike.jpg",
           title: "@double.edge.barbers"},
       		{name: "Connor O'Brien",
@@ -70,16 +70,21 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
     $scope.barbers = [
           {name: "Neil Honbo",
           image: "barbershot-neil.jpg",
-          title: "@double.edge.barbers"},
+          title: "Owner / Barber",
+          instagram: "@double.edge.barbers"},
+          
           {name: "Cory Walters",
           image: "barbershot-cory.jpg",
-          title: "@double.edge.barbers"},
+          title: "Barber"},
+          
           {name: "Mike Stout",
           image: "barbershot-mike.jpg",
-          title: "@double.edge.barbers"},
+          title: "Barber",
+          instagram: "@itsjustahaircut"},
+
           {name: "Connor O'Brien",
           image: "barbershot-connor.jpg",
-          title: "@double.edge.barbers"}
+          title: "Barber"}
         ];
     $scope.gallery =
      {path:"/src/images/gallery/",
@@ -90,9 +95,12 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
       {name: "40.JPG"},
       {name: "50.JPG"},
       {name: "60.JPG"},
+      {name: "65.JPG"},
       {name: "70.JPG"},
+      {name: "75.JPG"},
       {name: "80.JPG"},
-      {name: "90.JPG"}
+      {name: "90.JPG"},
+      {name: "95.JPG"}
     ]}
     $scope.services = [
           {name: "Haircut", price: "$35"},
@@ -103,11 +111,19 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
           {name: "Beard Trim", price: "$15+"}
 
         ]
+    $scope.background = {
+      contact : "/src/images/bg-bw-contact.jpg",
+      services : "/src/images/bg-bw-services.jpg",
+      gallery : "/src/images/bg-bw-contact2.jpg",
+      barbers : "/src/images/bg-bw-services2.jpg",
+      about : "/src/images/bg-bw-about.jpg"
+    }
 
 
     
     $scope.selectedUserIndex = undefined;
-    $scope.currentNavItem = 'page1';
+    $scope.currentNavItem = 'about';
+    $scope.currentBackground = $scope.background[$scope.currentNavItem];
 
 
 
@@ -119,19 +135,75 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
         $scope.selectedUserIndex = undefined;
       }
     };
-
-
-
 	
+  ////////////////////////////////////////
+  //Constructors
+  ////////////////////////////////////////
+  $scope.servicesView = function(){
+    $scope.currentBackground =  $scope.background["services"];
+  }
+  $scope.aboutView = function(){
+    $scope.currentBackground =  $scope.background["about"];
+  }
+  $scope.barbersView = function(){
+    $scope.currentBackground =  $scope.background["barbers"];
+  }
+  $scope.contactView = function(){
+    $scope.currentBackground =  $scope.background["contact"];
+  }
+  $scope.galleryView = function(){
+    $scope.currentBackground =  $scope.background["gallery"];
+  }
+
 
 	$scope.goto = function(str){
     if(str == 'booknow'){
-      window.location.href = 'https://www.vagaro.com/doubleedgebarbershop/about';
+      window.location.href = 'https://www.vagaro.com/doubleedgebarbershop';
     }else{
       console.log(str)
       $scope.currentNavItem = str;
+      console.log($scope.currentBackground)
       $location.url("/"+str);  
     }
 	}
+
+
+  ////////////////////////////////////////
+  //Gallery Code
+  ////////////////////////////////////////
+  $scope.showAdvanced = function(ev) {
+    console.log(ev)
+    $mdDialog.show({
+      controller: DialogController,
+      templateUrl: './assets/partials/dialog.tmpl.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true
+    })
+    .then(function(answer) {
+      $scope.status = 'You said the information was "' + answer + '".';
+    }, function() {
+      $scope.status = 'You cancelled the dialog.';
+    });
+  };
+
+  function DialogController($scope, $mdDialog) {
+    $scope.hide = function() {
+      $mdDialog.hide();
+    };
+
+    $scope.cancel = function() {
+      $mdDialog.cancel();
+    };
+
+    $scope.answer = function(answer) {
+      $mdDialog.hide(answer);
+    };
+  }
+// END Gallery Code
+////////////////////////////////////////
+
+
+
 
 });

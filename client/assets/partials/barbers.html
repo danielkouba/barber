@@ -1,19 +1,19 @@
-<!-- <div layout="column" layout-align="center center"> -->
-	
-<md-content class="md-padding" layout-xs="column" layout="row" layout-align="center center">
-    <div flex-xs flex-gt-xs="80" layout="row" md-cols="2" md-cols-gt-sm="2">
-
-
-    <h1 style="font-family: 'Milkshake'; color:grey;">Barbers</h1>
-    <!-- <div layout="column" layout-fill class="expanded dropdown-content"> -->
-    <!--       <md-grid-list
-                md-cols-xs="1" md-cols-sm="1" md-cols-md="4" md-cols-gt-md="4"
-                md-row-height-gt-md="2:2" md-row-height="2:2"
-                md-gutter="6px" md-gutter-gt-sm="4px" > -->
-        <!-- <md-grid-tile ng-repeat="barber in barbers" md-rowspan="1" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1"> -->
+<md-content ng-init="barbersView()" class="md-padding partial" layout="row" layout-align="center center" md-cols="2" md-cols-gt-sm="2" style="left:0;
+            top: 0;
+            overflow: auto; 
+            min-height:auto;
+            max-height:100%;
+            height:80vh">
+    <!-- <md-card> -->
+<!--         <md-card-title>
+          <md-card-title-text>
+            <h2 style="font-family: 'Milkshake'; color:grey;" class="md-headline">Barbers</h2>
+          </md-card-title-text>
+        </md-card-title> -->
+        <!-- <md-card-content md-cols="2" md-cols-gt-sm="2"> -->
           <md-card ng-repeat="barber in barbers">
             <md-card-title>
-              <md-card-title-text>
+              <md-card-title-text style="margin:10px">
                 <span class="md-headline">{{barber.name}}</span>
                 <span class="md-subhead">{{barber.title}}</span>
               </md-card-title-text>
@@ -25,8 +25,22 @@
               <md-button>Book Now</md-button>
             </md-card-actions>
           </md-card>
-      <!-- </md-grid-tile> -->
-    <!-- </md-grid-list> -->
-  </div>
+          <!-- </md-card-content> -->
+      <!-- </md-card> -->
 </md-content>
 
+
+
+
+<!-- 
+<md-grid-list md-cols-gt-md="2" md-cols="1" md-cols-md="2"
+        md-row-height-gt-md="1:1" md-row-height="4:3"
+        md-gutter-gt-md="16px" md-gutter-md="8px" md-gutter="4px">
+        <md-grid-tile md-colspan-gt-xs="1" md-rowspan-gt-xs="1" md-rowspan="1" md-colspan="1" ng-repeat="barber in barbers">
+          <md-grid-tile-header>
+            <h3>{{barber.name}}</h3>
+          </md-grid-tile-header>
+          <div class="md-media-lg card-media"><img class="md-user-avatar" src="/src/images/{{barber.image}}"/></div>
+        </md-grid-tile>
+
+      </md-grid-list> -->
