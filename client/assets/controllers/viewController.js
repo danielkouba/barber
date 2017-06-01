@@ -205,6 +205,27 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
 // END Gallery Code
 ////////////////////////////////////////
 
+// $stateProvider.state("home", {
+//   views: {
+//     "about": {
+//       templateUrl:'assets/partials/about.html'
+//     },
+//     "barbers": {
+//       templateUrl:'assets/partials/barbers.html' 
+//     },
+//     "contact": {
+//       templateUrl:'assets/partials/contact.html' 
+//     },
+//     "services": {
+//       templateUrl:'assets/partials/services.html' 
+//     }
+
+//   }
+// })
+
+
+
+
 
 
 

@@ -33,3 +33,12 @@
 .icon-yelp:before {
   content: "\ead7";
 }
+.icon-bar {
+  color:grey;
+  font-size: 2em;
+  a{
+    padding:5px;
+    color:grey;
+    text-decoration: none;
+  }
+}

@@ -66,6 +66,11 @@ $routeProvider
 	controller: 'viewController',	
 	controllerAs: 'VC'
 })
+.when('/secret', {
+	templateUrl: 'assets/partials/secret.html',
+	controller: 'viewController',	
+	controllerAs: 'VC'
+})
 .otherwise({
 		redirectTo: '/'
 	})
