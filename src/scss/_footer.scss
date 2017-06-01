@@ -2,5 +2,11 @@ footer {
 	width:100%;
 	position:absolute;
 	bottom:0;
-	background-color:grey;
+	color: white;
+	height: auto;
+	background-color:lighten($blue, 20);
+	a {
+		color:white;
+		text-decoration: none;
+	}
 }

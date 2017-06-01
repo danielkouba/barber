@@ -52,7 +52,7 @@ myApp.controller('navController', function ($scope, $timeout, $mdSidenav, $log) 
   .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log, $location) {
     $scope.goto = function(str){
       if(str == 'booknow'){
-        window.location.href = 'https://www.vagaro.com/doubleedgebarbershop/about';
+        window.location.href = 'https://www.vagaro.com/doubleedgebarbershop';
       }else{
         console.log(str)
         $scope.currentNavItem = str;

@@ -18,13 +18,13 @@ body{
   text-align: center;
 }
 .partial-container{
-  background: url('../../src/images/bg-bw-about.jpg') no-repeat left top;
+  background: url('../../src/images/bg-bw-about.jpg') no-repeat center top;
   background-size: cover;
   position:fixed;
   padding-top:150px;
   width:100%;
-  min-height:100%;
-  overflow-y: scroll;
+  height:100%;
+  // overflow-y: scroll;
   top:0px;
   left:0px;
   z-index:0;
@@ -32,9 +32,12 @@ body{
 .partial {
   background-color: rgba(0,0,0, 0)
 }
-md-content {
-  // background-color: #ECEFF1!important;
-  // padding: 30px;
+.card-title {
+  font-size:2.5em;
+}
+.text-content{
+  text-align: center;
+  // font-size: 2.5vw;
 }
 .logo-container{
   width:100%;
