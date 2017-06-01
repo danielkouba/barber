@@ -171,9 +171,10 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
   ////////////////////////////////////////
   //Gallery Code
   ////////////////////////////////////////
-  $scope.showAdvanced = function(ev) {
-    console.log(ev)
+  $scope.showAdvanced = function(ev, index) {
+    console.log(index)
     $mdDialog.show({
+      locals:{dataToPass: index},
       controller: DialogController,
       templateUrl: './assets/partials/dialog.tmpl.html',
       parent: angular.element(document.body),
@@ -187,7 +188,8 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
     });
   };
 
-  function DialogController($scope, $mdDialog) {
+  function DialogController($scope, $mdDialog, dataToPass) {
+    $scope.url = dataToPass;
     $scope.hide = function() {
       $mdDialog.hide();
     };
