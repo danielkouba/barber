@@ -113,7 +113,7 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
         ]
     $scope.background = {
       contact : "/src/images/bg-bw-contact.jpg",
-      services : "/src/images/bg-bw-services.jpg",
+      services : "/src/images/bg-bw-services3.jpg",
       gallery : "/src/images/bg-bw-contact2.jpg",
       barbers : "/src/images/bg-bw-services2.jpg",
       about : "/src/images/bg-bw-about.jpg"

@@ -1,13 +1,13 @@
-  <md-content class="md-padding partial" layout-xs="column" layout="row" layout-align="center center">
-    <div flex-xs flex-gt-xs="50" layout="column">
+  <md-content class="md-padding partial" layout-xs="column" layout="row" layout-align="center center" ng-init="servicesView()">
+    <div class="transparent" flex-xs flex-gt-xs="50" layout="column">
       <md-card>
         <!-- <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out"> -->
-        <md-card-title>
+        <md-card-title class="transparent">
           <md-card-title-text>
             <span class="md-headline card-title">Services</span>
           </md-card-title-text>
         </md-card-title>
-        <md-card-content layout="column" layout-align="center center">
+        <md-card-content layout="column" class="transparent" layout-align="center center">
           <table>
             <tr ng-repeat="service in services">
               <td>{{service.name}}</td>
