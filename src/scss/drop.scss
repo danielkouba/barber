@@ -21,11 +21,20 @@ body{
 .nav-item{
   font-size:2em;
 }
+.text-content {
+  font-size: 1.1em
+}
+.service-row {
+  padding:4px;
+}
 .alert {
   color:$red;
 }
-.transparent{
-  background-color: rgba(255,255,255, .5)
+.transparent-00{
+  background-color: rgba(255,255,255, 0)
+}
+.transparent-90{
+  background-color: rgba(255,255,255, .9)
 }
 .partial-container{
   background: url('../../src/images/bg-bw-about.jpg') no-repeat center top;
