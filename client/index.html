@@ -19,12 +19,12 @@
 </head>
 <body>
 
-        
+        <!-- Desktop Nav Bar -->
         <div ng-controller="viewController" ng-cloak hide-sm hide-xs>
           <md-content class="nav_bar" layout="row" layout-align="center start">
             <div class="corner-logo" style="border:none; margin:0;">  
-                &nbsp;
-              </div>
+              &nbsp;
+            </div>
             <md-nav-bar
               md-selected-nav-item="currentNavItem"
               nav-bar-aria-label="navigation links" layout="row" layout-align="space-around center">
@@ -50,8 +50,9 @@
             </md-nav-bar> 
           </md-content>
         </div>
+        <!-- END Desktop Nav Bar -->
 
-
+        <!-- Mobile Nav Bar -->
         <div ng-controller="navController" layout="column" ng-cloak>
           <a href="" class="mobile" ng-click="toggleLeft()" class="md-primary" hide-gt-sm>&#9776;</a> 
           <section layout="row" flex hide-gt-sm>
@@ -62,8 +63,11 @@
               md-is-locked-open="$mdMedia('gt-md')"
               md-whiteframe="4">
 
-            <md-toolbar class="md-theme-default">
-              <h1 class="md-toolbar-tools">Double Edge Barbershop</h1>
+            <md-toolbar class="md-theme-default" layout="row" layout-align="center center">
+              <!-- <h1 class="md-toolbar-tools">Double Edge Barbershop</h1> -->
+              <div class="corner-logo" style="border:none; margin:0;">  
+                &nbsp;
+              </div>
             </md-toolbar>
             <md-content layout-padding ng-controller="LeftCtrl">
               <md-button ng-click="goto('about')" class="md-primary" hide-gt-md>
@@ -99,13 +103,9 @@
             <!-- <div class="partial-container" ng-view="" ng-style="{'background-image':'url('+currentBackground+')'}"></div> -->
             <div class="partial-container" ng-controller="viewController" ng-view="" ng-style="{'background-image':'url(' + currentBackground + ')'}">{{currentBackground}}</div>
         </md-content>       
-</div>
+      </div>
+      <!-- END Mobile Nav Bar -->
         
-
-        <!-- END Nav Bar -->
-        <!-- Partial -->
-        
-        <!-- END Partial -->
         <footer>
           <div layout="row" layout-align="space-around center">
             
