@@ -1,6 +1,12 @@
   <!-- <md-content class="md-padding" layout="column" layout-align="center center"> -->
-  <md-content class="md-padding partial" layout-xs="column" layout="row" layout-align="center center" ng-init="contactView()">
-    <div flex-xs flex-gt-xs="50" layout="column">
+  <md-content class="md-padding partial" layout-xs="column" layout="row" layout-align="center center" ng-init="contactView()" style="left:0;
+            top: 0;
+            align-items: flex-start;
+            vertical-align: center;
+            flex-wrap: wrap;
+            max-width: 100%;
+            overflow-y: scroll;">
+    <div flex-xs flex-gt-xs="50" layout="column" style="height:1000px;">
       <md-card class="transparent-90">
         <md-card-title>
           <md-card-title-text>
@@ -19,9 +25,6 @@
               <span>{{data.content.data.address}}</span>
               <span>{{data.content.data.city}}, {{data.content.data.state}} {{data.content.data.zip}}</span> -->
           </div>
-
-
-
           <div layout="column" layout-fill layout-align="center center" class="text-content">      
               <div layout="row" class="icon-bar">
                 <a href="https://www.facebook.com/DoubleEdgeBarberShop/"><div class="icon-facebook2"></div></a>
@@ -30,6 +33,12 @@
               </div>
               <span>&#9743; 805-497-3400</span>
               <span>&#9993; coldxcut@gmail.com</span>
+          <table>
+            <tr>
+              <td class="service-row">Tues-Fri</td>
+              <td class="service-row">{{service.price}}</td>
+            </tr>
+          </table>
              
               
 <!-- 
