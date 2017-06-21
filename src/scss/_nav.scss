@@ -11,12 +11,21 @@ $logo-width:1.5*$logo-height;
   overflow:hidden;
 }
 
+.desktop-logo {
+  position:absolute;
+  top:5px;
+  left:20px;
+  width:$logo-width + px;
+  height: $logo-height + px;
+  z-index: 1000;
+}
+
 ._md-nav-bar-list, .nav_bar{
   background-color:rgba(0, 0, 0, 0);
 }
 
 .nav_bar {
-  padding: 30px 20px 0 10px;
+  padding: 55px 20px 0 $logo-width +  px;
   background-color:rgba(255, 255, 255, .5);
   overflow:hidden;
   font-family: 'Oswald';
