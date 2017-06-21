@@ -90,6 +90,11 @@
               </md-button>
             </md-content>
             <md-content layout-padding ng-controller="LeftCtrl">
+              <md-button ng-click="goto('gallery')" class="md-primary" hide-gt-md>
+                Gallery
+              </md-button>
+            </md-content>
+            <md-content layout-padding ng-controller="LeftCtrl">
               <md-button ng-click="goto('booknow')" class="md-warn" hide-gt-md>
                 Book Now
               </md-button>
@@ -101,7 +106,7 @@
         <md-content>
             <!-- <div class="partial-container" ng-view="" style="overflow-y: scroll;background:url(" + {{currentBackground}} + "') no-repeat left top;"></div> -->
             <!-- <div class="partial-container" ng-view="" ng-style="{'background-image':'url('+currentBackground+')'}"></div> -->
-            <div class="partial-container" ng-controller="viewController" ng-view="" ng-style="{'background-image':'url(' + currentBackground + ')'}">{{currentBackground}}</div>
+            <div class="partial-container" ng-controller="viewController" ng-view="" ng-style="{'background-image':'url(' + currentBackground + ')'}" style="overflow-y: auto;">{{currentBackground}}</div>
         </md-content>       
       </div>
       <!-- END Mobile Nav Bar -->
