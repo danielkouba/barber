@@ -64,7 +64,6 @@
               md-whiteframe="4">
 
             <md-toolbar class="md-theme-default" layout="row" layout-align="center center">
-              <!-- <h1 class="md-toolbar-tools">Double Edge Barbershop</h1> -->
               <div class="corner-logo" style="border:none; margin:0;">  
                 &nbsp;
               </div>
@@ -104,9 +103,7 @@
         </section>
 
         <md-content>
-            <!-- <div class="partial-container" ng-view="" style="overflow-y: scroll;background:url(" + {{currentBackground}} + "') no-repeat left top;"></div> -->
-            <!-- <div class="partial-container" ng-view="" ng-style="{'background-image':'url('+currentBackground+')'}"></div> -->
-            <div class="partial-container" ng-controller="viewController" ng-view="" ng-style="{'background-image':'url(' + currentBackground + ')'}" style="overflow-y: auto;">{{currentBackground}}</div>
+            <div class="partial-container" ng-controller="viewController" ng-view="" ng-style="{'background-image':'url(' + currentBackground + ')'}" style="overflow-y: auto;"></div>
         </md-content>       
       </div>
       <!-- END Mobile Nav Bar -->
