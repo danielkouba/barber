@@ -4,9 +4,24 @@ footer {
 	bottom:0;
 	color: white;
 	height: auto;
-	background-color:lighten($blue, 20);
+	// background-color:lighten($blue, 20);
+	background-color:darken($blue,20);
 	a {
 		color:white;
 		text-decoration: none;
 	}
+}
+.footer-subtitle{
+  font-family: 'Milkshake';
+  // color:grey;
+  margin:0;
+  // border-bottom: 1px solid rgba(100,100,100, .25);
+}
+.footer-icons {
+  font-size: 2em;
+  a{
+    padding:5px;
+    color:white;
+    text-decoration: none;
+  }
 }
