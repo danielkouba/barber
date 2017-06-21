@@ -21,6 +21,10 @@
 .service-row {
   padding:4px;
 }
+.hours-row{
+  line-height: 1em; 
+  text-align: left;
+}
 .alert {
   color:$red;
 }
@@ -34,7 +38,7 @@
   background: url('../../src/images/bg-bw-about.jpg') no-repeat center top;
   background-size: cover;
   position:fixed;
-  padding-top:150px;
+  // padding-top:150px;
   width:100%;
   height:100%;
   top:0px;
