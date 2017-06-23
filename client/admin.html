@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Double Edge Barbershop</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Raleway|Open+Sans+Condensed:300|Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css">
+    
+    <!-- <link rel="stylesheet" href="/src/css/main.css"> -->
+    <link rel="stylesheet" href="/src/css/drop.css">
+    
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+</head>
+<body>
+    <md-content>
+        <!-- <div ng-view=""></div> -->
+        <form action="" style="display:block;">
+			<label>Edit About</label>
+        	<input type="text" name="about" placeholder="About">
+        	<label for="">New Barber</label>
+        	<input type="text" name="barber-name" placeholder="Barber Name" ng-model="newBarber.name">
+        	<input type="text" name="barber-title" placeholder="Barber Title" ng-model="newBarber.title">
+        	<input type="text" name="barber-title" placeholder="Barber Link" ng-model="newBarber.link">
+			<label>Service</label>
+			<input type="text" name="service-desc" placeholder="Service Description" ng-model="newService.desc">
+			<input type="text" name="service-price" placeholder="Service Price" ng-model="newService.price">
+			<label>Edit Location</label>
+			<input type="text" name="location-address" placeholder="Address" ng-model="editLocation.address">
+			<input type="text" name="location-city" placeholder="City" ng-model="editLocation.city">
+			<input type="text" name="location-state" placeholder="State" ng-model="editLocation.state">
+			<input type="text" name="location-zip" placeholder="Zip" ng-model="editLocation.zip">
+			<label>Hours</label>
+			<input type="text" name="hours-desc" placeholder="Day(s)" ng-model="editHours.desc">
+			<input type="text" name="hours-value" placeholder="Hours"  ng-model="editHours.value">
+        </form>
+    </md-content>       
+  </div>
+  <!-- END Mobile Nav Bar -->
+   <!-- Bower Components -->
+    <script type="text/javaScript" src="/bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javaScript" src="/bower_components/angular/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script type="text/javaScript" src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javaScript" src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script type="text/javaScript" src="/bower_components/angular-aria/angular-aria.min.js"></script>
+    <script type="text/javaScript" src="/bower_components/angular-material/angular-material.min.js"></script>
+    <script type="text/javaScript" src="/bower_components/angular-snapscroll/dist/angular-snapscroll.min.js"></script>
+
+    <!-- App -->
+    <script type="text/javaScript" src="/assets/app.js"></script>
+    <!-- Controllers -->
+    <script type="text/javaScript" src="/assets/controllers/viewController.js"></script>
+    <script type="text/javaScript" src="/assets/controllers/navController.js"></script>
+    <script type="text/javaScript" src="/assets/factories/viewFactory.js"></script>
+    <!-- Nav Bar Code -->
+    <script type="text/javascript" src="/src/js/nav.js" ></script>
+
+</body>
+</html>
