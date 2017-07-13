@@ -4,6 +4,7 @@ footer {
 	bottom:0;
 	color: white;
 	height: auto;
+	-webkit-flex: 1 0 auto; flex: 1 0 auto;
 	// background-color:lighten($blue, 20);
 	background-color:darken($blue,20);
 	a {
