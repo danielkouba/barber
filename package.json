@@ -9,6 +9,9 @@
   "devDependencies": {
     "node-sass": "^4.5.3"
   },
+  "engines": {
+    "node": ">=50.9" // intentionally so big version number
+  },
   "scripts": {
     "build-css": "node-sass --output-style compressed -o client/src/css src/scss",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
