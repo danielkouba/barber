@@ -6,11 +6,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danielkouba/barber.git"
+  },
   "devDependencies": {
     "node-sass": "^4.5.3"
   },
   "engines": {
-    "node": ">=50.9" // intentionally so big version number
+    "node": ">=8.2"
   },
   "scripts": {
     "build-css": "node-sass --output-style compressed -o client/src/css src/scss",
