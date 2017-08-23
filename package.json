@@ -14,7 +14,7 @@
     "node-sass": "^4.5.3"
   },
   "engines": {
-    "node": "^8.2.1"
+    "node": "8.2.x"
   },
   "scripts": {
     "build-css": "node-sass --output-style compressed -o client/src/css src/scss",
