@@ -10,9 +10,6 @@
     "type": "git",
     "url": "git://github.com/danielkouba/barber.git"
   },
-  "devDependencies": {
-    "node-sass": "^4.5.3"
-  },
   "engines": {
     "node": "8.2.x"
   },
@@ -29,3 +26,7 @@
     "mongoose": "^4.11.5"
   }
 }
+// // 
+//   "devDependencies": {
+//     "node-sass": "^4.5.3"
+//   },
