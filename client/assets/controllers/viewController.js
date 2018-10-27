@@ -5,7 +5,7 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
       name: "About",
       content: {
       	type: "about",
-      	data: "Welcome to Double Edge Barbershop. We are a full-service shop located in the heart of Thousand Oaks, CA. Our team is anchored by four full-time licensed barbers and we have a passion for traditional barbering and for serving our community. We have high standards as do our guests. Stop in for a cut, hot towel shave or just hang out. At Double Edge you’re not a number, you’re family."
+      	data: "Welcome to Double Edge Barbershop. We are a full-service shop located in the heart of Thousand Oaks, CA. Our team is anchored by five full-time licensed barbers and we have a passion for traditional barbering and for serving our community. We have high standards as do our guests. Stop in for a cut, hot towel shave or just hang out. At Double Edge you’re not a number, you’re family."
       }
     },
     {
@@ -24,6 +24,9 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
           title: "@double.edge.barbers"},
       		{name: "Connor O'Brien",
           image: "barbershot-connor.jpg",
+          title: "@double.edge.barbers"},
+          {name: "Ryan Fields",
+          image: "barbershot-ryan.jpg",
           title: "@double.edge.barbers"}
       	]
       }
@@ -84,6 +87,10 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
 
           {name: "Connor O'Brien",
           image: "barbershot-connor.jpg",
+          title: "Barber"},
+
+          {name: "Ryan Fields",
+          image: "barbershot-ryan.jpg",
           title: "Barber"}
         ];
     $scope.gallery =
