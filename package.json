@@ -1,7 +1,7 @@
 {
   "name": "DoubleEdgeBarberShop",
   "version": "1.0.0",
-  "description": "",
+  "description": "DOUBLE EDGE BARBER SHOP REDESIGN",
   "main": "server.js",
   "keywords": [],
   "author": "",
@@ -10,12 +10,16 @@
     "type": "git",
     "url": "git://github.com/danielkouba/barber.git"
   },
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  },
   "engines": {
     "node": "8.2.x"
   },
   "scripts": {
     "build-css": "node-sass --output-style compressed -o client/src/css src/scss",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "start": "node server.js"
   },
   "dependencies": {
     "bcrypt": "^1.0.2",
@@ -24,9 +28,9 @@
     "express": "^4.15.3",
     "express-session": "^1.15.5",
     "mongoose": "^4.11.5"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/danielkouba/barber/issues"
+  },
+  "homepage": "https://github.com/danielkouba/barber#readme"
 }
-// // 
-//   "devDependencies": {
-//     "node-sass": "^4.5.3"
-//   },
