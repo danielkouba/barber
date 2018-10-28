@@ -22,7 +22,8 @@
     "node-sass": "^4.5.3"
   },
   "engines": {
-    "node": "8.2.x"
+    "node": "8.2.x",
+    "npm":  "5.2.0"
   },
   "dependencies": {
     "bcrypt": "^1.0.2",
