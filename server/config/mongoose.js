@@ -8,7 +8,9 @@ var mongoose = require('mongoose'),
 	dbURI	 = 'mongodb://localhost/doubleedge';
 
 
-mongoose.connect( dbURI );
+mongoose.connect( dbURI, {
+  useMongoClient: true
+});
 
 
 /*

@@ -16,17 +16,14 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
       		{name: "Neil Honbo",
           image: "barbershot-neil.jpg",
           title: "@double.edge.barbers"},
-      		{name: "Cory Walters",
-          image: "barbershot-cory.jpg",
-          title: "@double.edge.barbers"},
       		{name: "Michael Stout",
           image: "barbershot-mike.jpg",
           title: "@double.edge.barbers"},
       		{name: "Connor O'Brien",
           image: "barbershot-connor.jpg",
           title: "@double.edge.barbers"},
-          {name: "Ryan Fields",
-          image: "barbershot-ryan.jpg",
+          {name: "Joe Cerda",
+          image: "barbershot-joe.jpg",
           title: "@double.edge.barbers"}
       	]
       }
@@ -76,10 +73,6 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
           title: "Owner / Barber",
           instagram: "@double.edge.barbers"},
           
-          {name: "Cory Walters",
-          image: "barbershot-cory.jpg",
-          title: "Barber"},
-          
           {name: "Mike Stout",
           image: "barbershot-mike.jpg",
           title: "Barber",
@@ -89,8 +82,8 @@ myApp.controller('viewController', function($scope, $location, $mdDialog,viewFac
           image: "barbershot-connor.jpg",
           title: "Barber"},
 
-          {name: "Ryan Fields",
-          image: "barbershot-ryan.jpg",
+          {name: "Joe Cerda",
+          image: "barbershot-joe.jpg",
           title: "Barber"}
         ];
     $scope.gallery =
