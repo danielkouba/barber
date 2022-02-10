@@ -19,7 +19,7 @@
     "url": "https://github.com/danielkouba/barber/issues"
   },
   "devDependencies": {
-    "node-sass": "^4.5.3"
+    "node-sass": "^7.0.0"
   },
   "engines": {
     "node": "8.2.x",
