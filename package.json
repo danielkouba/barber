@@ -31,7 +31,7 @@
     "bower": "^1.8.0",
     "express": "^4.15.3",
     "express-session": "^1.15.5",
-    "mongoose": "^4.11.5"
+    "mongoose": "^4.13.21"
   },
   "homepage": "https://github.com/danielkouba/barber#readme"
 }
